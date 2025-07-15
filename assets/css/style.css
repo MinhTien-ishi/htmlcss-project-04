@@ -34,6 +34,7 @@ textarea,
 select,
 button {
     font-size: inherit;
+    font-family: inherit;
 }
 
 .container {
@@ -63,6 +64,7 @@ button {
 
 .btn:hover {
     opacity: 0.9;
+    cursor: pointer;
 }
 
 .btn--primary {
@@ -84,9 +86,7 @@ button {
 }
 
 .section-heading {
-    margin-top: 28px;
     color: #000958;
-    font-family: Sora, sans-serif;
     font-size: 5.2rem;
     font-weight: 700;
     line-height: 1.2; /* 119.231% */
@@ -279,7 +279,7 @@ button {
     --height: 60px;
 
     min-width: 190px;
-    font-size: 16px;
+    font-size: 1.6rem;
     box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
 }
 
@@ -307,7 +307,7 @@ button {
 .about__media {
     position: relative;
 }
-.about-label {
+.about__label {
     color: #5e6085;
     font-family: Sora, sans-serif;
     font-size: 1.6rem;
@@ -327,7 +327,7 @@ button {
 .about__checklist {
     display: grid;
     grid-template-columns: auto auto;
-    align-items: center;
+    justify-content: flex-start;
     gap: 36px;
     margin-top: 54px;
 }
@@ -338,7 +338,6 @@ button {
     align-items: center;
     column-gap: 10px;
     color: #48496a;
-    font-family: Poppins;
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1; /* 100% */
@@ -349,13 +348,13 @@ button {
     width: 24px;
     height: 24px;
     background: #ff5d31;
-    box-shadow: 0px 4px -15px -3px rgba(256, 93, 49, 0.69);
+    box-shadow: 0px 4px 15px -3px rgba(256, 93, 49, 0.69);
     border-radius: 4px;
 }
 
 .about__check-item::after {
     position: absolute;
-    top: 1px;
+    top: 2px;
     left: 5px;
     content: url(../icons/check.svg);
 }
@@ -370,12 +369,12 @@ button {
     border-radius: 10px;
     background: #5bd6e2;
     box-shadow: -15px 26px 48px 0px rgba(85, 240, 255, 0.17);
+    text-align: center;
 }
 
 .about__card-title {
-    text-align: center;
     color: #fff;
-    font-family: Sora;
+    font-family: Sora, sans-serif;
     font-size: 4.2rem;
     font-weight: 700;
     line-height: 1; /* 100% */
@@ -465,7 +464,7 @@ button {
 }
 
 .about__decor-img:nth-child(5) {
-    top: 336px;
+    bottom: 150px;
     right: 19px;
 }
 
@@ -486,7 +485,7 @@ button {
 }
 
 .tab__list::after,
-.tab__item-active::after,
+.tab__item__active::after,
 .tab__content-more::after {
     content: "";
     position: absolute;
@@ -499,7 +498,7 @@ button {
     background: #ff5b2e;
 }
 
-.tab__item-active::after {
+.tab__item__active::after {
     width: 97px;
     opacity: 1;
 }
@@ -579,14 +578,6 @@ button {
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 1; /* 100% */
-}
-
-.section__heading {
-    color: #000958;
-    font-family: Sora, sans-serif;
-    font-size: 5.2rem;
-    font-weight: 700;
-    line-height: 1.19; /* 119.231% */
 }
 
 .service__body {
@@ -901,7 +892,7 @@ button {
     padding: 30px 28px;
 }
 
-.pricing-item__active {
+.pricing-item--active {
     box-shadow: 0px 20px 44px 0px rgba(195, 108, 22, 0.06);
 }
 
@@ -965,11 +956,7 @@ button {
     column-gap: 44px;
 }
 
-.review__list {
-    display: flex;
-}
-
-.preview__control {
+.review__control {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -982,15 +969,19 @@ button {
     color: #ff5b2e;
 }
 
-.preview__control:hover {
+.review__control:hover {
     background: #ff5b2e;
     color: #fff;
     cursor: pointer;
     border-color: #ff5b2e;
 }
 
-.preview__control:nth-last-of-type(2) {
+.review__control:nth-last-of-type(2) {
     margin-left: auto;
+}
+
+.review__list {
+    display: flex;
 }
 
 .review-item {
@@ -1031,7 +1022,7 @@ button {
 }
 
 .review-item__quote {
-    margin-top: 34px;
+    margin-top: 24px;
     width: 553px;
     color: #000;
     font-size: 1.8rem;
@@ -1080,4 +1071,32 @@ button {
 .review__dot--active {
     width: 24px;
     background: #ff5b2e;
+}
+
+/* Blog */
+.blog {
+    padding: 78px 0;
+}
+
+.blog__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog__info {
+    width: 350px;
+    margin-right: 74px;
+}
+
+.blog__desc {
+    margin-top: 0;
+}
+
+.blog__cta {
+    margin-top: 24px;
+    min-width: 182px;
+    border-radius: 31px;
+    border: 1px solid rgb(255 91 46 / 60%);
+    color: #ff5b2e;
 }
