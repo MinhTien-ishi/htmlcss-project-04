@@ -84,6 +84,7 @@ button {
 }
 
 .section-heading {
+    margin-top: 28px;
     color: #000958;
     font-family: Sora, sans-serif;
     font-size: 5.2rem;
@@ -955,13 +956,17 @@ button {
 
 /* Review */
 .review {
-    padding: 53px 0;
+    padding: 104px 0 52px;
 }
 
 .review__inner {
     display: flex;
     align-items: center;
     column-gap: 44px;
+}
+
+.review__list {
+    display: flex;
 }
 
 .preview__control {
@@ -984,9 +989,15 @@ button {
     border-color: #ff5b2e;
 }
 
+.preview__control:nth-last-of-type(2) {
+    margin-left: auto;
+}
+
 .review-item {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+    width: 100%;
     column-gap: 115px;
 }
 
@@ -1005,6 +1016,10 @@ button {
     height: 82%;
     background: #ffda54;
     border-radius: inherit;
+}
+
+.review__content {
+    overflow: hidden;
 }
 
 .review-item__img {
