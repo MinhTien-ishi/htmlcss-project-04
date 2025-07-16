@@ -1158,7 +1158,7 @@ button {
 /* Footer */
 .footer {
     margin-top: 52px;
-    background: #fff6ed;
+    background: linear-gradient(to right, #fff6ed 42%, #fffaf5 42%);
 }
 
 .footer__inner {
@@ -1167,6 +1167,12 @@ button {
 
 .footer__left {
     padding: 114px 0 140px;
+    width: 42%;
+}
+
+.footer__right {
+    flex: 1;
+    padding: 52px 0 48px 0;
 }
 
 .subscribe-form {
@@ -1243,4 +1249,32 @@ button {
 
 .social-item:hover {
     opacity: 0.9;
+}
+
+.footer__row {
+    margin-left: 129px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 58px 137px;
+}
+
+.footer__list {
+    margin-top: 14px;
+}
+
+.footer__link {
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 2; /* 200% */
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__copyright {
+    margin: 52px 0 48px 22px;
+    color: #656689;
+    font-size: 1.2rem;
+    line-height: 1.16; /* 116.667% */
 }
